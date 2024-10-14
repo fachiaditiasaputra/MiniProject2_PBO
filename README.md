@@ -231,3 +231,56 @@ import java.util.List;
         boolean hapusPraktikum(String kodePraktikum);
         boolean ubahJadwalPraktikum(String kodePraktikum, String jadwalBaru);
     }
+
+package service;
+import model.Praktikum;
+import java.util.List;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author MyBook Hype AMD
+ */
+    public class PenjadwalanService {
+
+    private static List<Praktikum> daftarPraktikum = new ArrayList<>();
+
+    // Method untuk menambah praktikum (static)
+    public static void tambahPraktikum(Praktikum praktikum) {
+        daftarPraktikum.add(praktikum);
+        System.out.println("Praktikum berhasil ditambahkan!");
+    }
+
+    // Method untuk menampilkan semua praktikum (static)
+    public static void tampilkanPraktikum() {
+        System.out.println("\nDaftar Praktikum:");
+        for (Praktikum praktikum : daftarPraktikum) {
+            praktikum.displayInfo();
+            System.out.println("------------------------");
+        }
+    }
+
+    // Method untuk menghapus praktikum berdasarkan kode (static)
+    public static void hapusPraktikum(String kodePraktikum) {
+        for (Praktikum praktikum : daftarPraktikum) {
+            if (praktikum.getKodePraktikum().equals(kodePraktikum)) {
+                daftarPraktikum.remove(praktikum);
+                System.out.println("Praktikum dengan kode " + kodePraktikum + " berhasil dihapus!");
+                return;
+            }
+        }
+        System.out.println("Praktikum tidak ditemukan!");
+    }
+
+    // Method untuk mengubah jadwal praktikum (static)
+    public static void ubahJadwalPraktikum(String kodePraktikum, String jadwalBaru) {
+        for (Praktikum praktikum : daftarPraktikum) {
+            if (praktikum.getKodePraktikum().equals(kodePraktikum)) {
+                praktikum.setJadwal(jadwalBaru);
+                System.out.println("Jadwal praktikum berhasil diubah!");
+                return;
+            }
+        }
+        System.out.println("Praktikum tidak ditemukan!");
+    }
+}
