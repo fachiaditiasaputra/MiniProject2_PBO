@@ -1,5 +1,29 @@
 # MiniProject2_PBO
-sama seperti sebelumnya hanya saya menerapkan dan merubah beberapa variabel yang ada dalam ketentuan mulai dari inheritence , encapsulation, abstraction , interface dan final keyword
+# Deskripsi Program 
+pada program sistem penjadwalan praktikum yang menerapkan konsep oop dan juga ketentuan yang telah diberikan
+# Fitur Utama
+pada program yang saya buat memiliki fitur CRUD untuk mngelola data jadwal praktikum.antara lain:
+1. tambah praktikum
+2. lihat daftar praktikum
+3. hapus praktikum
+4. ubah jadwal praktium
+5. keluar
+# struktur program 
+program yang saya buat tergbagi menjadi beberapa bagian 
+- Main class: SistemPenjadwalanPraktikumyang berfungsi sebagai titik utama menjalankan program
+- Model class:  Praktikum, PraktikumLab, dan PraktikumTeori digunakan untuk mewakili data praktikum. Kelas Praktikum merupakan parent class, sementara PraktikumLab dan PraktikumTeori adalah subclass yang mewarisi atribut dan method dari Praktikum.
+- Service Class: PenjadwalanService berisi logika untuk melakukan operasi CRUD pada daftar praktikum.
+- Interface: CRUDService adalah interface yang mendefinisikan metode CRUD untuk kelas layanan.
+# Cara kerja Program 
+1. Yang pastinya jalankan program, dan menu utama akan ditampilkan dengan beberapa pilihan.
+2. lalu akan muncul opsi
+   - tambah praktikum
+   - lihat daftar praktikum
+   - hapus praktikum
+   - ubah jadwal praktikum
+   - keluar
+dan selesai jadi program yang saya buat merupakan pengelolaan jadwal praktikum dengan menerapkan ketentuan yang telah dibuat
+# Berikut kode program yang telah saya buat
 
 package com.mycompany.sistempenjadwalanpraktikum;
 
