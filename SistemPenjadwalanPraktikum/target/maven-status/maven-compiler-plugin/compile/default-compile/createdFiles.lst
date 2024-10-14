@@ -1,0 +1,6 @@
+model\Praktikum.class
+model\PraktikumLab.class
+com\mycompany\sistempenjadwalanpraktikum\SistemPenjadwalanPraktikum.class
+model\PraktikumTeori.class
+service\CRUDService.class
+service\PenjadwalanService.class
